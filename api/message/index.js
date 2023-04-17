@@ -1,7 +1,7 @@
 module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
 
-    const responseMessage = 'x-ms-auth-token = ';
+    let responseMessage = 'x-ms-auth-token = ';
     responseMessage += req.headers['x-ms-auth-token'] ? req.headers['x-ms-auth-token'] : 'none';
     responseMessage += 'x-ms-client-principal = ';
     responseMessage += req.headers['x-ms-client-principal'] ? req.headers['x-ms-client-principal'] : 'none';
